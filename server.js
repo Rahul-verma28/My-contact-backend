@@ -13,6 +13,10 @@ app.use('/api/contacts', require('./routes/contactRoutes'));
 app.use('/api/users', require('./routes/userRoutes'));
 app.use(errorHandler)
 
+app.get("/", (req, res) => {
+  res.send("Nice working");
+});
+
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 })
